@@ -52,20 +52,20 @@ try:
    streamlit.dataframe(back_from_function)
 
 except URLError as e:
-streamlit.error()
-   
+    streamlit.error()    
+
 #import snowflake.connector
 #my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 #my_cur = my_cnx_cursor()
 #my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
 #my_data_rows = my_cur.fetchall()
-#streamlit.header("The fruit load list contains:")
+
 #streamlit.dataframe(my_data_rows)
 
 streamlit.header('The fruit load list contains:')
 #Snowflake-related functions
 def get_fruit_load_list():
-  with my_cnx_cursor() as my_cur:
+  with my_cnx_cursor() as my_cur
        my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
        return my_cur.fetchall()
       
